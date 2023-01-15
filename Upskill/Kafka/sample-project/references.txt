@@ -1,0 +1,2 @@
+https://www.youtube.com/watch?v=EUzH9khPYgs
+https://medium.com/the-research-nest/creating-a-real-time-data-stream-using-apache-kafka-in-python-132e0e5630d3
