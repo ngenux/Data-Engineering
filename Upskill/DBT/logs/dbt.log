@@ -1,0 +1,80 @@
+
+
+============================== 2023-02-03 07:10:33.648649 | 7adb952c-688f-432d-a60d-164ab4655419 ==============================
+[0m07:10:33.648649 [info ] [MainThread]: Running with dbt=1.4.1
+[0m07:10:33.651647 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': 'C:\\Users\\ArvindYekkirala\\.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m07:10:33.651647 [debug] [MainThread]: Tracking: tracking
+[0m07:10:33.667649 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018AD7DA7850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018AD7DA70D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018AD7DA7400>]}
+[0m07:10:33.668862 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\ArvindYekkirala\.dbt
+[0m07:10:48.668308 [debug] [MainThread]: Starter project path: C:\Users\ArvindYekkirala\anaconda3\envs\DBT\lib\site-packages\dbt\include\starter_project
+[0m07:10:54.829762 [info ] [MainThread]: Profile data_observability written to C:\Users\ArvindYekkirala\.dbt\profiles.yml using target's sample configuration. Once updated, you'll be able to start developing with dbt.
+[0m07:10:54.830761 [info ] [MainThread]: 
+Your new dbt project "data_observability" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m07:10:54.831762 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018AD7DA7760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018AD7D7AA60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018AD7D7ADF0>]}
+[0m07:10:54.831762 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-02-03 07:39:05.111269 | d21dab11-c056-4482-adfd-b25f0a569db6 ==============================
+[0m07:39:05.111269 [info ] [MainThread]: Running with dbt=1.4.1
+[0m07:39:05.113039 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': 'C:\\Users\\ArvindYekkirala\\.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'project_name': 'jaffle_shop', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m07:39:05.113039 [debug] [MainThread]: Tracking: tracking
+[0m07:39:05.121994 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025FF379D5B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025FF379D670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025FF379D070>]}
+[0m07:39:05.122994 [debug] [MainThread]: Starter project path: C:\Users\ArvindYekkirala\anaconda3\envs\DBT\lib\site-packages\dbt\include\starter_project
+[0m07:39:11.607477 [info ] [MainThread]: 
+Your new dbt project "jaffle_shop" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m07:39:11.607917 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025FED550FA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025FF19341C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025FF3840730>]}
+[0m07:39:11.608894 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-02-03 08:55:17.383485 | 7f89d369-dcad-46bc-a22b-3c5b76689738 ==============================
+[0m08:55:17.383485 [info ] [MainThread]: Running with dbt=1.4.1
+[0m08:55:17.386487 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': 'C:\\Users\\ArvindYekkirala\\.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'project_name': 'jaffle_shop', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m08:55:17.386487 [debug] [MainThread]: Tracking: tracking
+[0m08:55:17.396486 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027E5EEFD610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027E5EEFD550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027E5EEFD100>]}
+[0m08:55:17.398487 [debug] [MainThread]: Starter project path: C:\Users\ArvindYekkirala\anaconda3\envs\DBT\lib\site-packages\dbt\include\starter_project
+[0m08:55:23.847286 [info ] [MainThread]: 
+Your new dbt project "jaffle_shop" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m08:55:23.847969 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027E5EEFD250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027E5EEFD4C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027E5EEFD550>]}
+[0m08:55:23.847969 [debug] [MainThread]: Flushing usage events
