@@ -4,12 +4,12 @@ snowflake.connector.paramstyle = 'qmark'
 
 # Set up connection
 conn = snowflake.connector.connect(
-    user='vani',
-    password='Vanivasa@32',
-    account='ffa91112.us-east-1',
-    role='DE_ROLE',
-    database='DEV_DWH',
-    schema='DWH schema'
+    user='',
+    password='',
+    account='',
+    role='',
+    database='',
+    schema=''
 )
 
 cursor = conn.cursor()

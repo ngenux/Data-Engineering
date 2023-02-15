@@ -3,10 +3,10 @@ from psycopg2.extras import Json
 
 # Connect to the database
 conn = psycopg2.connect(
-    host="paropostrpt.cgltfgjn7lnm.us-west-2.rds.amazonaws.com",
-    database="legacy_warehouse",
-    user="fivetran",
-    password="n3wP455!"
+    host='',
+    database='',
+    user='',
+    password=''
 )
 
 # Create a new table with an "id" column and a "data" column
