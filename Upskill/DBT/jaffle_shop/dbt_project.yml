@@ -5,6 +5,10 @@
 name: 'jaffle_shop'
 version: '1.0.0'
 config-version: 2
+#on-run-start:
+#  - "{{ enable_freshness_check() }}"
+#  - "{{ log('Starting dbt with freshness check enabled', info=True) }}"
+
 
 # This setting configures which "profile" dbt uses for this project.
 profile: 'jaffle_shop'
@@ -34,3 +38,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   jaffle_shop:
     +materialized: table
+    
+vars:
+  dbt_query_timeout_seconds: 300
+    
