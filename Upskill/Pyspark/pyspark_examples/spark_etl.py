@@ -7,13 +7,13 @@ os.environ['PYSPARK_SUBMIT_ARGS'] = '--packages "org.apache.hadoop:hadoop-aws:3.
 # Set up the SparkSession with the appropriate configurations for S3
 spark = SparkSession.builder \
     .appName('s3-read') \
-    .config('spark.hadoop.fs.s3a.access.key', "AKIAYJC5TJLTWRIQTYHI") \
-    .config('spark.hadoop.fs.s3a.secret.key', "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") \
-    .config('spark.hadoop.fs.s3a.endpoint', 's3.amazonaws.com') \
+    .config('spark.hadoop.fs.s3a.access.key', "****************************") \
+    .config('spark.hadoop.fs.s3a.secret.key', "**********************************") \
+    .config('spark.hadoop.fs.s3a.endpoint', 's********') \
     .config('spark.hadoop.fs.s3a.impl', 'org.apache.hadoop.fs.s3a.S3AFileSystem') \
     .getOrCreate()
-conn = pymysql.connect(user='devuser', database='practice',
-                               password='Chaitu2798!',
+conn = pymysql.connect(user='*****', database='spark',
+                               password='*******',
                                host="localhost",
                                port=3306)
 cursor = conn.cursor()
