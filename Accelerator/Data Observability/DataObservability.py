@@ -1,9 +1,9 @@
 from Connection import *
 from GlobalParams import GlobalParams
-from DataObservabilityBackup import *
 from Drift import *
 from Quality import *
 from Utils import *
+from Usage import *
 
 
 class DataObservability:
@@ -12,24 +12,24 @@ class DataObservability:
         self.connection = Connection()
         self.nq = NumericalQuality()
         self.cq = CategoricalQuality()
-        self.do = DataObservabilityBackup()
         self.drift = Drift()
         self.schema_name = "adaptiveai"
         self.information_schema_query = """select table_name from information_schema.tables where table_schema = '""" + self.schema_name + """' 
                 and table_name like '%dim%'"""
         self.utils = Utils()
+        self.usage = Usage()
 
-    def generate_numercial_dataframe(self,df,num_cols,path):
+    def generate_numercial_dataframe(self, df, num_cols, path):
         num_df = self.nq.return_dataframe_quality(df, num_cols)
         sheet_name = "Numerical"
         self.utils.save_excel_file(path, sheet_name, num_df)
 
-    def generate_categorical_dataframe(self,df,cat_cols,path):
+    def generate_categorical_dataframe(self, df, cat_cols, path):
         cat_df = self.cq.return_dataframe_quality(df, cat_cols)
         sheet_name = "Categorical"
         self.utils.save_excel_file(path, sheet_name, cat_df)
 
-    def generate_drift_dataframe(self,df, time_cols, num_cols,path):
+    def generate_drift_dataframe(self, df, time_cols, num_cols, path):
         date_column = time_cols[0]
         try:
             drift_df = self.drift.get_drift_df(date_column, df, num_cols)
@@ -40,6 +40,11 @@ class DataObservability:
             pass
         sheet_name = "Drift"
         self.utils.save_excel_file(path, sheet_name, drift_df)
+
+    def generate_usage_dataframe(self, table_name, path):
+        usage_df = self.usage.get_usage(table_name)
+        sheet_name = "Usage"
+        self.utils.save_excel_file(path, sheet_name, usage_df)
 
     def run_code(self):
 
@@ -57,10 +62,9 @@ class DataObservability:
             cat_cols = [col for col in df if df[col].dtype.name in GlobalParams.CATEGORY_TYPES.value]
             time_cols = [col for col in df if df[col].dtype.name in GlobalParams.DATETIME_TYPES.value]
             if len(num_cols) > 0:
-                self.generate_numercial_dataframe(df,num_cols,path)
+                self.generate_numercial_dataframe(df, num_cols, path)
             if len(cat_cols) > 0:
                 self.generate_categorical_dataframe(df, cat_cols, path)
             if len(time_cols) > 0:
-                self.generate_drift_dataframe(df, time_cols, num_cols,path)
-
-
+                self.generate_drift_dataframe(df, time_cols, num_cols, path)
+            self.generate_usage_dataframe(table, path)

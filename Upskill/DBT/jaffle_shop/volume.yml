@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    database: postgres
+
+    tables:
+      - name: customers 
+        loaded_at_field: 'created_at'
+        tests:
+          - name: record_count_warning
+            severity: WARN
+            description: "Send warning if fewer than 100 records are entered every time the table is updated"
+            assertion: not_null_count('{{ this }}') >= 100

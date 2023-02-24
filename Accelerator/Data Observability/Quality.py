@@ -41,6 +41,7 @@ class NumericalQuality(Quality):
             coldict['Maximum'] = np.round(df[col].max(), 2)
             coldict['Mean'] = np.round(df[col].mean(), 2)
             coldict['Median'] = np.round(df[col].median(), 2)
+            coldict['Skewness'] = np.round(df[col].skew(), 2)
             num_df = pd.DataFrame(coldict.items()).T
             new_header = num_df.iloc[0]
             num_df = num_df[1:]
