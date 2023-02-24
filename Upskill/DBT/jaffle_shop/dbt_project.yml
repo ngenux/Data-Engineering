@@ -41,4 +41,8 @@ models:
     
 vars:
   dbt_query_timeout_seconds: 300
+  
+packages:
+ - package: fishtown-analytics/dbt_utils
+   version: 0.8.0
     
