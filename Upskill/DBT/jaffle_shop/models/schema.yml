@@ -1,5 +1,41 @@
 #version: 2
 
+version: 2
+
+
+
+sources:
+  - name: jaffle_shop
+    database: postgres
+    
+
+
+    tables:
+        - name: stg_customers
+          columns:
+            - name: customer_id
+              tests:
+                - row_count:
+                    above: 300
+            
+
+
+
+
+#models:
+#  - name: customers
+#    tests:
+#      - name: record_count_warning
+#        description: "Send warning if fewer than 100 records are entered every time the table is updated"
+#        severity: WARN
+#        assertion: not_null_count('{{ this }}') >= 100
+
+
+
+
+
+#version: 2
+
 #models:
 #  - name: customers
 #    columns:
