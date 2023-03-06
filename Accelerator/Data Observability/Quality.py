@@ -19,6 +19,26 @@ class Quality(ABC):
                         df[col] = df[col].astype('category')
         return df
 
+    @staticmethod
+    def classify_skewness(skew_val, threshold=0.5):
+        if skew_val > threshold or skew_val < -threshold:
+            return "highly skewed"
+        elif skew_val > threshold / 2 or skew_val < -threshold / 2:
+            return "moderately skewed"
+        elif skew_val > -threshold / 2 and skew_val < threshold / 2:
+            return "slightly skewed"
+        else:
+            return "approximately symmetric"
+
+    @staticmethod
+    def calculate_outlier_range(df,col):
+        q1 = df[col].quantile(0.25)
+        q3 = df[col].quantile(0.75)
+        iqr = q3 - q1
+        lower_bound = q1 - 1.5 * iqr
+        upper_bound = q3 + 1.5 * iqr
+        return (lower_bound, upper_bound)
+
     @abstractmethod
     def return_dataframe_quality(self, df, cols):
         pass
@@ -42,6 +62,9 @@ class NumericalQuality(Quality):
             coldict['Mean'] = np.round(df[col].mean(), 2)
             coldict['Median'] = np.round(df[col].median(), 2)
             coldict['Skewness'] = np.round(df[col].skew(), 2)
+            coldict['Skewness_Category'] = Quality.classify_skewness(coldict['Skewness'], threshold=0.5)
+            lower_bound, upper_bound = Quality.calculate_outlier_range(df, col)
+            coldict['Outlier Range'] = f'({lower_bound}, {upper_bound})'
             num_df = pd.DataFrame(coldict.items()).T
             new_header = num_df.iloc[0]
             num_df = num_df[1:]
