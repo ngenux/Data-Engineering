@@ -4,6 +4,7 @@ version: 2
 
 
 
+
 sources:
   - name: jaffle_shop
     database: postgres
@@ -17,7 +18,11 @@ sources:
               tests:
                 - row_count:
                     above: 300
-            
+                - schema:
+                    columns:
+                        - name: customer_id
+                          data_type: integer
+                      
 
 
 

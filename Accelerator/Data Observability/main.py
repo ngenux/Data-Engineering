@@ -1,3 +1,6 @@
+import warnings
+
+warnings.filterwarnings("ignore")
 from DataObservability import *
 
 do = DataObservability()

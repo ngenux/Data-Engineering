@@ -19,6 +19,6 @@ if __name__ == '__main__':
                    cwd=f'C:/Users/ArvindYekkirala/Documents/Git - DataEngineering/Data-Engineering/Upskill/DBT/{project_name}')
 
     # Serve docs
-    docs_serve_cmd = ['dbt', 'docs', 'serve', '--port', '9001']
+    docs_serve_cmd = ['dbt', 'docs', 'serve', '--port', '9002']
     subprocess.run(docs_serve_cmd,
                    cwd=f'C:/Users/ArvindYekkirala/Documents/Git - DataEngineering/Data-Engineering/Upskill/DBT/{project_name}')
