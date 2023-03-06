@@ -9,7 +9,7 @@ class Usage:
 
     def get_usage(self, table_name):
         usage_query = '''SELECT distinct SUT.schemaname ,SUT.seq_scan as 
-        no_of_times_Accessed, tab.table_name, SAI.indexrelname ,       case when 
+        select_usage, n_tup_ins as insert_usage, n_tup_upd as update_usage , tab.table_name, SAI.indexrelname ,       case when 
         SUT.seq_scan >0 then 'Used' else 'Not Used' end as Tables_Usability,       case when SAI.indexrelname  is 
         null then 'Index not used' else 'Index used' end as Index_Usability FROM Information_schema.tables Tab left 
         join pg_stat_user_tables SUT  on tab.table_name = SUT.relname left join pg_stat_all_indexes SAI on 

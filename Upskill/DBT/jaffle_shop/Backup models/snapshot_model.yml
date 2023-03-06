@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    schema: stg_orders_schema
+    tables:
+      - name: stg_orders
+        identifier: stg_orders
+        columns:
+          - name: order_id
+            description: "ID of the order"
+          - name: customer_id
+            description: "ID of the customer"
+          - name: order_date
+            description: "Date of the order"
+          - name: status
+            description: "Status of the order"
+
+        tests:
+              ignore_extra_columns: false
